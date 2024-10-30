@@ -16,11 +16,13 @@ public class Titulo {
     }
 
     public void avalia(double nota) {
-        somaDasAvaliacoes += nota;
-        totalDeAvaliacoes++;
+        if (nota >= 0 && nota <= 10) {
+            somaDasAvaliacoes += nota;
+            totalDeAvaliacoes++;
+        }
     }
 
-    public double pegaMedia() {
+    public double pegaMediaDeAvaliacoes() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
